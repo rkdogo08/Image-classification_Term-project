@@ -49,6 +49,7 @@
 
 | Level | codebook size | image size | step size  | model | Etc | score |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 400 |  256x256 | 8 | SVM | rbf, C=4, gamma=0.001, scaler | [0.43026](https://github.com/rkdogo08/Image-classification_Term-project/blob/master/code/term_project_level0.ipynb) |
 | 1 | 400 |  256x256 | 8 | SVM | C=1| 0.54078 |
 | 2 | 200 |  256x256 | 8 | SVM | C=1| 0.56264 |
 | 2 | 400 |  256x256 | 8 | SVM | C=1| 0.58747 |
