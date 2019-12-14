@@ -1,5 +1,8 @@
 # Image-classification_Term-project
 
+깃허브 : https://github.com/sejongresearch/2019.Fall.PatternRecognition
+캐글 : https://www.kaggle.com/c/2019-ml-finalproject/overview
+
 - 데이터 로드
 ```python
 df_data=pd.read_csv('/content/Label2Names.csv',header=None)
