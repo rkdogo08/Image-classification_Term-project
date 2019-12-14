@@ -130,7 +130,7 @@ make_result_csv(results,test_name)
 | 2 | 600 |  256x256 | 8 | PCA, SVM | C=1 | 0.58806 |
 | 2 | 600 |  256x256 | 8 | SVM | C=1 | [0.58806]() |
 
-- 가중치 변화
+- SPM 가중치 변화
 
  | level0 |  level1 | level2 | score |
 |:--:|:--:|:--:|:--:|
