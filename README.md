@@ -1,7 +1,10 @@
 # Image-classification_Term-project
 
 깃허브 : https://github.com/sejongresearch/2019.Fall.PatternRecognition
+
 캐글 : https://www.kaggle.com/c/2019-ml-finalproject/overview
+
+논문 : https://inc.ucsd.edu/~marni/Igert/Lazebnik_06.pdf
 
 - 데이터 로드
 ```python
