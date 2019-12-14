@@ -1,7 +1,7 @@
 
 | Level | codebook size | image size | step size  | model | Etc | score |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| 0 | 400 |  128x128 | 4 | SVM | linear,C=1 | 0.31028 |
+| 0 | 400 |  64x64 | 4 | SVM | linear,C=1 | 0.31028 |
 | 0 | 400 |  128x128 | 4 | SVM | linear,C=1 | 0.35992 |
 | 0 | 400 |  128x128 | 5 | SVM | linear,C=1 | 0.37352 |
 | 0 | 400 |  256x256 | 8 | Random Forest | n_estimators=1000 | 0.41193 |
