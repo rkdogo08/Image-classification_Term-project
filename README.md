@@ -68,7 +68,7 @@ scaler=StandardScaler()
 h_list=scaler.fit_transform(h_list)
 test_h=scaler.transform(test_h)
 ```
-- 학습 모델(histogram Intersection)
+- 학습 모델(Histogram Intersection)
 ```python
 results=make_histogramIntersection(h_list,test_h)
 ```
@@ -103,19 +103,21 @@ make_result_csv(results,test_name)
 | 0 | 400 |  256x256 | 8 | X | SVM | rbf, C=4, gamma=0.001 | 0.41193 |
 | 0 | 400 |  256x256 | 8 | O | PCA, SVM | rbf, C: 4, gamma: 0.001 | 0.43971 |
 | 0 | 400 |  256x256 | 8 | LDA | SVM | RAM crash | -- |
-| 2 | 600 |  256x256 | 8 | X | SVM | C=1 | 0.58806 |
-| 2 | 600 |  256x256 | 8 | O | PCA, SVM | C=1 | 0.58806 |
+| 2 | 600 |  256x256 | 8 | X | SVM | rbf, C: 4, gamma: 0.001 | 0.58806 |
+| 2 | 600 |  256x256 | 8 | O | SVM | rbf, C: 4, gamma: 0.001 | 0.58806 |
 
 - 정규화
 
 | Level | codebook size | image size | step size  | sclae | model | Etc | score |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | 0 | 400 |  256x256 | 8 | X | SVM | rbf, C=4, gamma=0.001 | 0.41193 |
-| 0 | 400 |  256x256 | 8 | O | SVM | rbf, C=4, gamma=0.001 | [0.43026](https://github.com/rkdogo08/Image-classification_Term-project/blob/master/code/term_project_level0.ipynb) |
+| 0 | 400 |  256x256 | 8 | O | SVM | rbf, C=4, gamma=0.001 | 0.43026 |
 | 0 | 400 |  256x256 | 8 | X | PCA, SVM | rbf, C: 4, gamma: 0.001 | 0.43971 |
 | 0 | 400 |  256x256 | 8 | O | PCA, SVM | rbf, C: 4, gamma: 0.001 | [0.4444](https://github.com/rkdogo08/Image-classification_Term-project/blob/master/code/term_project_PCA_scale.ipynb) |
-| 2 | 600 |  256x256 | 8 | X | SVM | C=1 | 0.59633 |
-| 2 | 600 |  256x256 | 8 | O | SVM | C=1 | 0.60874 |
+| 2 | 600 |  256x256 | 8 | X | SVM | Histogram Intersection | 0.59633 |
+| 2 | 600 |  256x256 | 8 | O | SVM | Histogram Intersection | 0.60342 |
+| 2 | 1200 |  256x256 | 8 | X | SVM | Histogram Intersection | 0.60106 |
+| 2 | 1200 |  256x256 | 8 | O | SVM | Histogram Intersection | 0.60874 |
 
 
 
@@ -124,11 +126,13 @@ make_result_csv(results,test_name)
 | Level | codebook size | image size | step size  | model | Etc | score |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | 0 | 400 |  256x256 | 8 | SVM | rbf, C=4, gamma=0.001, scaler | [0.43026](https://github.com/rkdogo08/Image-classification_Term-project/blob/master/code/term_project_level0.ipynb) |
-| 1 | 400 |  256x256 | 8 | SVM | C=1| 0.54078 |
-| 2 | 200 |  256x256 | 8 | SVM | C=1| 0.56264 |
-| 2 | 400 |  256x256 | 8 | SVM | C=1| 0.58747 |
-| 2 | 600 |  256x256 | 8 | PCA, SVM | C=1 | 0.58806 |
-| 2 | 600 |  256x256 | 8 | SVM | C=1 | [0.58806]() |
+| 1 | 400 |  256x256 | 8 | SVM | Histogram Intersection | 0.54078 |
+| 2 | 200 |  256x256 | 8 | SVM | Histogram Intersection| 0.56264 |
+| 2 | 400 |  256x256 | 8 | SVM | Histogram Intersection| 0.58747 |
+| 2 | 600 |  256x256 | 8 | SVM | Histogram Intersection| 0.58806 |
+| 2 | 1200 |  256x256 | 8 | SVM | Histogram Intersection | [0.60874](https://github.com/rkdogo08/Image-classification_Term-project/blob/master/code/term_project_1200_scale.ipynb) |
+
+
 
 - SPM 가중치 변화
 
