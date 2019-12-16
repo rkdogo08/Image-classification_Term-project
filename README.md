@@ -100,7 +100,7 @@ make_result_csv(results,test_name)
 | 0 | 400 |  64x64 | 4 | SVM | linear,C=1 | 0.31028 |
 | 0 | 400 |  128x128 | 4 | SVM | linear,C=1 | 0.35992 |
 | 0 | 400 |  128x128 | 5 | SVM | linear,C=1 | 0.37352 |
-| 0 | 400 |  256x256 | 8 | SVM | rbf, C=4, gamma=0.001 | 0.41193 |
+| 0 | 400 |  256x256 | 8 | SVM | linear,C=1 | 0.38238 |
 
 - 차원축소
 
