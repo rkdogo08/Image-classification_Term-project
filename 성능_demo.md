@@ -25,3 +25,72 @@
 |:--:|:--:|:--:|:--:|
  | 0.25 |  0.25| 0.5 | 0.58806 |
  | 0.25 |  0.5| 1 | 0.59633 |
+
+
+
+# 성능
+- 다양한 학습모델 비교
+
+| Level | codebook size | image size | step size  | model | Etc | score |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 400 |  256x256 | 8 | Random Forest | n_estimators=1000 | 0.41193 |
+| 0 | 400 |  256x256 | 8 | Decision Tree+ Bagging | n_estimators=1000 | 0.41193 |
+| 0 | 400 |  256x256 | 8 | SVM | rbf | 0.41193 |
+
+- 이미지/스텝크기 비교
+
+| Level | codebook size | image size | step size  | model | Etc | score |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 400 |  64x64 | 4 | SVM | linear | 0.31028 |
+| 0 | 400 |  128x128 | 4 | SVM | linear | 0.35992 |
+| 0 | 400 |  128x128 | 5 | SVM | linear | 0.37352 |
+| 0 | 400 |  256x256 | 8 | SVM | linear | 0.38238 |
+
+- 차원축소
+
+| Level | codebook size | image size | step size  | PCA | model | Etc | score |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 400 |  256x256 | 8 | X | SVM | rbf | 0.41193 |
+| 0 | 400 |  256x256 | 8 | O | PCA, SVM | rbf | 0.43971 |
+| 2 | 600 |  256x256 | 8 | X | SVM | rbf | 0.58806 |
+| 2 | 600 |  256x256 | 8 | O | SVM | rbf | 0.58806 |
+
+- 정규화
+
+| Level | codebook size | image size | step size  | sclae | model | Etc | score |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 400 |  256x256 | 8 | X | SVM | rbf | 0.41193 |
+| 0 | 400 |  256x256 | 8 | O | SVM | rbf | 0.43026 |
+| 0 | 400 |  256x256 | 8 | X | PCA, SVM | rbf| 0.43971 |
+| 0 | 400 |  256x256 | 8 | O | PCA, SVM | rbf | 0.4444 |
+| 2 | 1200 |  256x256 | 8 | X | SVM | Histogram Intersection | 0.60106 |
+| 2 | 1200 |  256x256 | 8 | O | SVM | Histogram Intersection | 0.60874 |
+
+
+
+- SPM
+
+| Level | codebook size | image size | step size  | model | Etc | score |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 400 |  256x256 | 8 | SVM | rbf, C=4, gamma=0.001, scaler | 0.43026 |
+| 1 | 400 |  256x256 | 8 | SVM | Histogram Intersection | 0.54078 |
+| 2 | 400 |  256x256 | 8 | SVM | Histogram Intersection| 0.58747 |
+
+
+-코드북 사이즈
+
+| Level | codebook size | image size | step size  | model | Etc | score |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| 2 | 200 |  256x256 | 8 | SVM | Histogram Intersection| 0.56264 |
+| 2 | 400 |  256x256 | 8 | SVM | Histogram Intersection| 0.58747 |
+| 2 | 600 |  256x256 | 8 | SVM | Histogram Intersection| 0.58806 |
+| 2 | 1200 |  256x256 | 8 | SVM | Histogram Intersection | 0.60874 |
+
+
+
+- SPM 가중치 변화
+
+ | level0 |  level1 | level2 | score |
+|:--:|:--:|:--:|:--:|
+ | 0.25 |  0.25| 0.5 | 0.58806 |
+ | 0.25 |  0.5| 1 | 0.59633 |
