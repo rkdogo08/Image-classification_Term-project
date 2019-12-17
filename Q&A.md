@@ -2,12 +2,12 @@
 
    A : Level0에서 학습을 위해 SVM GPU를 이용하였는데 이 방법이 비정상적으로 오래 걸렸던 것으로 linesrSVM을 이용하게 되면 굉장히 빠른 속도로 결과를 보여줍니다. SVM에는 튜닝해야 할 파라미터가 있으므로 그리드 서치를 이용하게 되면 C에대한 파라미터, gamma 파라미터 각각 2개만 넣어주어도 아래와 같이 랜덤 포레스트보다 많은시간이 걸립니다. 
    
-   | Level | codebook size | image size | step size  | model | Etc | score | time(s) |
+   | Level | codebook size | image size | step size  | model | Etc | time(s) |score | 
    |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-   | 0 | 400 |  256x256 | 8 | Random Forest | n_estimators=1000 | 0.39361 | 46.8 |
+   | 0 | 400 |  256x256 | 8 | Random Forest | n_estimators=1000 | 46.8 |0.39361 | 
    | 0 | 400 |  256x256 | 8 | SVM | linear | 0.40602 | 9.0 |
-   | 0 | 400 |  256x256 | 8 | SVM GridSearch| rbf | 0.38120 | 128.2 |
-   | 0 | 400 |  256x256 | 8 | SVM_GPU | linear | -- | 333.5 |
+   | 0 | 400 |  256x256 | 8 | SVM GridSearch| rbf | 128.2 |0.38120 |
+   | 0 | 400 |  256x256 | 8 | SVM_GPU | linear |  333.5 |-- |
    
   
    
