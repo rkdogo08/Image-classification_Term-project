@@ -10,19 +10,19 @@
 
    A :  PCA는 SIFT를 통해 뽑은 피쳐에 이용하였으며 PCA함수는 아래와 같습니다.
    ![image](https://user-images.githubusercontent.com/46476876/70971024-52616100-20e3-11ea-97e4-9d3a0bb357f3.png)
-```python
-from sklearn.decomposition import PCA
-def PCA_(train_des,test_des,n):
-    train_des=np.array(train_des).reshape(-1,128)
-    test_des=(np.array(test_des)).reshape(-1,128)
-    
-    pca=PCA(64)
-    train_des=pca.fit_transform(train_des)
-    test_des=pca.transform(test_des)
-    
-    train_des=train_des.reshape(3030,1024,-1)
-    test_des=test_des.reshape(1692,1024,-1)
-    
-    return train_des,test_des
-```
+   ```python
+   from sklearn.decomposition import PCA
+   def PCA_(train_des,test_des,n):
+       train_des=np.array(train_des).reshape(-1,128)
+       test_des=(np.array(test_des)).reshape(-1,128)
+
+       pca=PCA(64)
+       train_des=pca.fit_transform(train_des)
+       test_des=pca.transform(test_des)
+
+       train_des=train_des.reshape(3030,1024,-1)
+       test_des=test_des.reshape(1692,1024,-1)
+
+       return train_des,test_des
+   ```
 
