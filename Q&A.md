@@ -5,7 +5,7 @@
    | Level | codebook size | image size | step size  | model | Etc | time(s) |score | 
    |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
    | 0 | 400 |  256x256 | 8 | Random Forest | n_estimators=1000 | 46.8 |0.39361 | 
-   | 0 | 400 |  256x256 | 8 | SVM | linear | 0.40602 | 9.0 |
+   | 0 | 400 |  256x256 | 8 | SVM | linear |  9.0 |0.40602 |
    | 0 | 400 |  256x256 | 8 | SVM GridSearch| rbf | 128.2 |0.38120 |
    | 0 | 400 |  256x256 | 8 | SVM_GPU | linear |  333.5 |-- |
    
